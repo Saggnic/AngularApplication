@@ -13,4 +13,12 @@ export class ShoppingListService {
   addIngredient(ingredient: Ingredient) {
     this.ingredients.push(ingredient);
   }
+
+  addIngredientsToShoppingList(ingredient: Ingredient[]) {
+    this.ingredients.push(...ingredient); ///... converts array to list.push method can handle array  but as single objcet
+  }
+  // isItemPresentInList(ingredient: Ingredient) {
+  //   console.log(this.ingredients.indexOf(ingredient));
+  //   return this.ingredients.indexOf(ingredient);
+  // }
 }
