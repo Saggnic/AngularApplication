@@ -23,6 +23,12 @@ export class RecipeService {
   ];
   constructor(private shoppingListService: ShoppingListService) {}
 
+  setRecipes(recipes: Recipe[]) {
+    console.log(recipes);
+    this.recipes = recipes;
+    this.getRecipe();
+  }
+
   getRecipe() {
     return this.recipes;
   }
